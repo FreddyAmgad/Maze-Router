@@ -1,71 +1,54 @@
-# Maze Router Project
+# 🚀 Maze Router Project - Optimized IC Routing
 
-## Team
-- Andrew Ishak
-- Freddy Amgad
-- Kirolous Fouty
-- Michael Reda
-
-#### Tentative Guiding Workplan
-- **Member 1**: Implement routing algorithm and BFS logic.
-- **Member 2**: Input parsing and output generation.
-- **Member 3**: Develop visualization and refine visual output.
-- **Member 4**: Testing, debugging, and documentation.
-
-#### Workflow history (Intermediate Milestone)
-- **Kirolous**: keleton and draft code, but not working properly
-- **Michael & Freddy**: fixed the code and the penalties on M0
-- **Kirolous**: multi grid and heuristic order support
-- **Freddy**: fixed bend calculation, and improved visualization
-- **Andrew**: test cases, inputs, and screenshots
-
-#### Workflow history (Final Milestone)
-- **Freddy**: multi grid cost, visulization, and correct the logic
-- **Kirolous**: fixed parsing, and multi grid visualization
-- **Michael**: adjusted_logic_of_cost_across_two_layers, and Statements_Printing
-- **Andrew**: test cases, inputs, slides, and screenshots
-
-
-## Overview
-The Maze Router project is designed to optimize routing paths for IC design using a grid-based layout. It supports two-layer routing (M0 and M1) with distinct directional preferences and incorporates penalties for bends and vias. The router reads input files defining grid dimensions, obstacles, and nets and generates output files with optimized routing paths. A visualization script is included to display the results graphically.
+## 👥 Team Members
+- 👨‍💻 Andrew Ishak  
+- 👨‍💻 Freddy Amgad  
+- 👨‍💻 Kirolous Fouty  
+- 👨‍💻 Michael Reda  
 
 ---
 
-## Implementation
-The project is implemented in Python and follows a modular structure:
-- **MazeRouter Class**: Handles grid setup, obstacle placement, routing logic, and result storage.
-- **Routing Algorithm**: Uses Breadth-First Search (BFS) for pathfinding, considering penalties for bends and vias.
-- **Visualization**: Plots routed paths and obstacles on a 2D grid for easy examination.
+## 🔍 Overview
+The **Maze Router** is a high-performance, grid-based routing tool built for optimizing Integrated Circuit (IC) layouts. It efficiently finds paths across two metal layers—M0 and M1—while minimizing bends and vias to ensure compact and effective routing.
 
 ---
 
-## Compilation and Execution
+## 🔥 Key Features
+- ✔ **Multi-Layer Routing** – Supports M0 (horizontal preferred) & M1 (vertical preferred) layers  
+- ✔ **BFS-Based Pathfinding** – Implements Breadth-First Search with a penalty-based system for optimized pathfinding  
+- ✔ **Obstacle Handling** – Avoids blocked grid cells for realistic IC layout simulation  
+- ✔ **Multi-Pin Net Support** – Capable of routing complex nets with multiple pins  
+- ✔ **Visualization** – Provides clear 2D plots showing routed paths and obstacles  
 
-### Prerequisites
-- Python 3.8 or higher
-- Matplotlib library (`pip install matplotlib`)
-- NumPy library (`pip install numpy`)
+---
 
-### Steps to Run
-1. Place your input file (e.g., `input.txt`) in the project directory.
-2. Run the script:
-   ```bash
-   python maze_router.py input.txt output.txt
-3. The output file (output.txt) will be generated in the project directory.
+## 🎯 Challenges Overcome
+- ⚡ **Balancing Complexity & Efficiency** – Achieved efficient routing over multiple layers without compromising speed  
+- ⚡ **Penalty System** – Developed a cost-aware system that balances shortest paths with minimization of bends and vias  
+- ⚡ **Visual Clarity** – Designed an intuitive visualization interface suitable for dense layouts  
 
+---
 
-### Challenges
-- Balancing Complexity and Efficiency: Ensuring the algorithm handled multi-layer routing while maintaining acceptable performance.
-- Handling Multi-Pin Nets: Developing logic to route multiple pins in one net.
-- Penalty Calculation: Accurately applying penalties for bends and vias while maintaining shortest paths.
-- Visualization: Representing complex routing scenarios clearly.
+### ⚙️ Core Components
+#### MazeRouter Class
+- Grid initialization & obstacle placement  
+- Penalty-aware BFS routing  
+- Multi-net & multi-pin optimization  
 
+#### Routing Algorithm
+- **Layer-Aware BFS:** Prioritizes horizontal routing on M0 and vertical routing on M1  
+- **Bend & Via Penalties:** Increases path cost for direction changes and layer switches  
 
-### Files
-- mazerouter.py: Main script containing all functionalities.
-- input.txt: Input file.
-- output.txt: Generated output file with routed paths.
-- README.md: Documentation and report.
+#### Visualization Engine
+- Color-coded paths for M0 and M1  
+- Clear marking of obstacles and routes  
 
-### Results
-The router has been tested with various scenarios, including simple 2-pin nets, multi-pin nets, varying penalties, and overlapping nets. Visualization confirms correct routing.
+---
+
+## ⚡ Quick Start
+
+### 📋 Prerequisites
+- Python 3.8 or higher  
+- Install dependencies:
+```bash
+pip install matplotlib numpy
